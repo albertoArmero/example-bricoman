@@ -290,7 +290,7 @@
     <div id="barcode-picker" class="scanner"></div>
     <div id="custom-ui" style="visibility: hidden;">
       <!--<div id="barcode-picker-overlay" class="overlay"></div>-->
-      <img id="close-scanner" class="overlay-close" onclick="closeBarcodePicker()"></img>
+      <img id="close-scanner" class="overlay-close" onclick="closeBarcodePicker();console.log('HOLA');"></img>
       <img id="barcode-picker-overlay-icon" class="overlay-icon"></img>
       <div id="barcode-picker-overlay-hint" class="overlay-hint">SCAN THE BARCODE TO SHOW THE PRODUCT INFORMATION</div>
       <div id="barcode-picker-overlay-viewfinder-parent" class="overlay-viewfinder-parent">
@@ -415,7 +415,7 @@
         document.getElementById("form").hidden = false;
         document.getElementById("description").hidden = false;
 
-        scanditBarcodePicker.setVisible(false).pauseScanning();
+        scanditBarcodePicker.setVisible(false).pauseScanning(true);
         document.getElementById("scan-result").value = "";
       }
     </script>
